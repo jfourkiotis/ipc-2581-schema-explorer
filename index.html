@@ -66,7 +66,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
             100% { transform: rotate(360deg); }
         }
     </style>
-<link rel="modulepreload" href="/ipc-2581-schema-explorer/ipc2581-explorer-e4612b6e845591d7.js" crossorigin="anonymous" integrity="sha384-7U9s+y8RjvFEd0QJHExwniylI7ecvAvbs/dh7u+ABBIHRmvhqMkB5J/DSHH6c0QZ"><link rel="preload" href="/ipc-2581-schema-explorer/ipc2581-explorer-e4612b6e845591d7_bg.wasm" crossorigin="anonymous" integrity="sha384-zVSAuGdVjEE6q3qfT3mf/XVh8q6stTneIg2W3WMfLXC0o7Ws58+p9Uzk80zRwCOf" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/ipc-2581-schema-explorer/ipc2581-explorer-e4612b6e845591d7.js" crossorigin="anonymous" integrity="sha384-ehU5UndkCA7wPetcGBSAYnoWwS7HcaNUO3RT2WvXsPfv8PTbn/fMZz2PRvWOfWQL"><link rel="preload" href="/ipc-2581-schema-explorer/ipc2581-explorer-e4612b6e845591d7_bg.wasm" crossorigin="anonymous" integrity="sha384-+twBnbhrcaQLNtb8fgiRGyrSe72M1BUWGE5OXfOcZz7rpMMaKfpa7kgVRYYnImge" as="fetch" type="application/wasm"></head>
 <body>
     <div id="loading">
         <h1>IPC-2581 Schema Explorer</h1>
@@ -77,14 +77,12 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <canvas id="the_canvas_id"></canvas>
 
     <script type="module">
-        import { start } from '/ipc-2581-schema-explorer/ipc2581-explorer-e4612b6e845591d7.js';
-
-        async function run() {
+        // Wait for Trunk to load the WASM, then start the app
+        window.addEventListener('TrunkApplicationStarted', async () => {
+            const { start } = window.wasmBindings;
             await start('the_canvas_id');
             document.getElementById('loading').style.display = 'none';
-        }
-
-        run();
+        });
     </script>
 </body>
 </html>
