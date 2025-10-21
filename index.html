@@ -6,8 +6,8 @@
     <title>IPC-2581 Schema Explorer</title>
     
 <script type="module">
-import init, * as bindings from '/ipc-2581-schema-explorer-demo/ipc2581-explorer-e4612b6e845591d7.js';
-const wasm = await init({ module_or_path: '/ipc-2581-schema-explorer-demo/ipc2581-explorer-e4612b6e845591d7_bg.wasm' });
+import init, * as bindings from '/ipc-2581-schema-explorer/ipc2581-explorer-e4612b6e845591d7.js';
+const wasm = await init({ module_or_path: '/ipc-2581-schema-explorer/ipc2581-explorer-e4612b6e845591d7_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -66,7 +66,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
             100% { transform: rotate(360deg); }
         }
     </style>
-<link rel="modulepreload" href="/ipc-2581-schema-explorer-demo/ipc2581-explorer-e4612b6e845591d7.js" crossorigin="anonymous" integrity="sha384-w+5BZnf2zoJuCuzD8AI33Z3hcUyoUHY4KCMbmhZODM2f9qss+grs6+T8453Ue38o"><link rel="preload" href="/ipc-2581-schema-explorer-demo/ipc2581-explorer-e4612b6e845591d7_bg.wasm" crossorigin="anonymous" integrity="sha384-1BKKng45soArRnMlgjuLDyaL3CRQL4JbxSBV/FDtINp+CkUon6q9hSKBD2/2vERZ" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/ipc-2581-schema-explorer/ipc2581-explorer-e4612b6e845591d7.js" crossorigin="anonymous" integrity="sha384-7U9s+y8RjvFEd0QJHExwniylI7ecvAvbs/dh7u+ABBIHRmvhqMkB5J/DSHH6c0QZ"><link rel="preload" href="/ipc-2581-schema-explorer/ipc2581-explorer-e4612b6e845591d7_bg.wasm" crossorigin="anonymous" integrity="sha384-zVSAuGdVjEE6q3qfT3mf/XVh8q6stTneIg2W3WMfLXC0o7Ws58+p9Uzk80zRwCOf" as="fetch" type="application/wasm"></head>
 <body>
     <div id="loading">
         <h1>IPC-2581 Schema Explorer</h1>
