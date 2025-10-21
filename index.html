@@ -77,10 +77,9 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <canvas id="the_canvas_id"></canvas>
 
     <script type="module">
-        import init, { start } from './ipc2581_explorer.js';
+        import { start } from '/ipc-2581-schema-explorer/ipc2581-explorer-e4612b6e845591d7.js';
 
         async function run() {
-            await init();
             await start('the_canvas_id');
             document.getElementById('loading').style.display = 'none';
         }
