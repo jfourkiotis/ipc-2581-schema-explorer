@@ -336,18 +336,22 @@ export function start(canvas_id) {
     return takeObject(ret);
 }
 
-function __wbg_adapter_6(arg0, arg1) {
-    wasm.__wbindgen_export_5(arg0, arg1);
+function __wbg_adapter_14(arg0, arg1, arg2) {
+    wasm.__wbindgen_export_5(arg0, arg1, addHeapObject(arg2));
 }
 
-function __wbg_adapter_15(arg0, arg1, arg2) {
+function __wbg_adapter_17(arg0, arg1, arg2) {
     wasm.__wbindgen_export_6(arg0, arg1, addHeapObject(arg2));
 }
 
-function __wbg_adapter_18(arg0, arg1) {
+function __wbg_adapter_24(arg0, arg1) {
+    wasm.__wbindgen_export_7(arg0, arg1);
+}
+
+function __wbg_adapter_29(arg0, arg1) {
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-        wasm.__wbindgen_export_7(retptr, arg0, arg1);
+        wasm.__wbindgen_export_8(retptr, arg0, arg1);
         var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
         var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
         if (r1) {
@@ -356,10 +360,6 @@ function __wbg_adapter_18(arg0, arg1) {
     } finally {
         wasm.__wbindgen_add_to_stack_pointer(16);
     }
-}
-
-function __wbg_adapter_23(arg0, arg1, arg2) {
-    wasm.__wbindgen_export_8(arg0, arg1, addHeapObject(arg2));
 }
 
 function __wbg_adapter_481(arg0, arg1, arg2, arg3) {
@@ -1419,7 +1419,7 @@ function __wbg_get_imports() {
     };
     imports.wbg.__wbindgen_cast_2e5c9884c28eb1fb = function(arg0, arg1) {
         // Cast intrinsic for `Closure(Closure { dtor_idx: 112, function: Function { arguments: [], shim_idx: 115, ret: Result(Unit), inner_ret: Some(Result(Unit)) }, mutable: true }) -> Externref`.
-        const ret = makeMutClosure(arg0, arg1, 112, __wbg_adapter_18);
+        const ret = makeMutClosure(arg0, arg1, 112, __wbg_adapter_29);
         return addHeapObject(ret);
     };
     imports.wbg.__wbindgen_cast_7c316abdc43840a3 = function(arg0, arg1) {
@@ -1434,12 +1434,12 @@ function __wbg_get_imports() {
     };
     imports.wbg.__wbindgen_cast_961c191d38ad6699 = function(arg0, arg1) {
         // Cast intrinsic for `Closure(Closure { dtor_idx: 250, function: Function { arguments: [Externref], shim_idx: 251, ret: Unit, inner_ret: Some(Unit) }, mutable: true }) -> Externref`.
-        const ret = makeMutClosure(arg0, arg1, 250, __wbg_adapter_15);
+        const ret = makeMutClosure(arg0, arg1, 250, __wbg_adapter_17);
         return addHeapObject(ret);
     };
     imports.wbg.__wbindgen_cast_9ec9b5b4df696911 = function(arg0, arg1) {
         // Cast intrinsic for `Closure(Closure { dtor_idx: 112, function: Function { arguments: [], shim_idx: 117, ret: Unit, inner_ret: Some(Unit) }, mutable: true }) -> Externref`.
-        const ret = makeMutClosure(arg0, arg1, 112, __wbg_adapter_6);
+        const ret = makeMutClosure(arg0, arg1, 112, __wbg_adapter_24);
         return addHeapObject(ret);
     };
     imports.wbg.__wbindgen_cast_bbb4883c6389f1de = function(arg0, arg1) {
@@ -1464,7 +1464,7 @@ function __wbg_get_imports() {
     };
     imports.wbg.__wbindgen_cast_ec08dbbbdb361572 = function(arg0, arg1) {
         // Cast intrinsic for `Closure(Closure { dtor_idx: 112, function: Function { arguments: [NamedExternref("Event")], shim_idx: 113, ret: Unit, inner_ret: Some(Unit) }, mutable: true }) -> Externref`.
-        const ret = makeMutClosure(arg0, arg1, 112, __wbg_adapter_23);
+        const ret = makeMutClosure(arg0, arg1, 112, __wbg_adapter_14);
         return addHeapObject(ret);
     };
     imports.wbg.__wbindgen_cast_feefb5fadd6457fd = function(arg0, arg1) {
@@ -1542,7 +1542,7 @@ async function __wbg_init(module_or_path) {
     }
 
     if (typeof module_or_path === 'undefined') {
-        module_or_path = new URL('ipc2581-explorer_bg.wasm', import.meta.url);
+        module_or_path = new URL('ipc2581_explorer_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
