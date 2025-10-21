@@ -2,7 +2,7 @@
 
 Interactive web-based explorer for the IPC-2581B XML Schema.
 
-**Live Demo:** https://jfourkiotis.github.io/ipc-2581-schema-explorer-demo/
+**Live Demo:** https://jfourkiotis.github.io/ipc-2581-schema-explorer/
 
 ## About
 
